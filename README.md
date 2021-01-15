@@ -16,3 +16,6 @@ Requirements
 Must be able to demonstrate the working CI pipeline that you have been able to build by rolling out updates to the system without interrupting the user experience
 
 Produce reports of any designs and work created.
+
+Trello board:
+https://trello.com/b/goLwBUbZ/qa-sfia2 
