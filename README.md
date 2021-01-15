@@ -19,3 +19,9 @@ Produce reports of any designs and work created.
 
 Trello board:
 https://trello.com/b/goLwBUbZ/qa-sfia2 
+
+My idea:
+Service 1 is the User Interface
+Service 2 generates a random footballer strength (Reflexes, Defending, Crossing, Speed, Shooting, Passing) 
+Service 3 generates a random footballer weakness (Reflexes, Defending, Crossing, Speed, Shooting, Passing)
+Service 4 generates a footballer's ideal position with their random strength and weakness (Goalkeeper, Defender, Full back, Midfielder, Winger, Striker)
