@@ -1,10 +1,10 @@
 from application import app
-from flask import request, Response 
+from flask import request, jsonify
 
 @app.route("/position", methods=["POST"])
 def get_position():
-    positions = [ "pace" = "winger", "defending" = "centreback", "shooting" = "striker"]
-    strength = request.data.decode("utf-8")
-    positions = [ "passing" = "striker", "dribbling" = "centreback", "heading" = "winger"]
-    weakness = request.data.decode("utf-8")
-    return Response(positions[strength, weakness] , mimetype='text/plain')
+    suited_positions = {"pace" : "winger", "defending" : "centreback", "shooting" : "striker"}
+    strength = request.get_json()["strength"]
+    unsuited_positions = { "passing" : "striker", "dribbling" : "centreback", "heading" : "winger"}
+    weakness = request.get_json()["weakness"]
+    return jsonify({ "suited_position" : suited_positions[strength], "unsuited_position" : unsuited_positions[weakness] })
