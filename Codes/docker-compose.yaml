@@ -7,6 +7,8 @@ services:
     ports: 
     - target: 5000
       published: 5000
+    environment: 
+      DATABASE_URI: ${DATABASE_URI}
   service_2:
     container_name: "football_gen_service_2"
     image: "ahafiz15/football_gen_service_2"
