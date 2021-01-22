@@ -1,0 +1,23 @@
+version: "3.8"
+services: 
+  service_1:
+    container_name: "football_gen_service_1"
+    image: "ahafiz15/football_gen_service_1"
+    build: ./service_1
+    ports: 
+    - target: 5000
+      published: 5000
+    environment: 
+      DATABASE_URI: ${DATABASE_URI}
+  service_2:
+    container_name: "football_gen_service_2"
+    image: "ahafiz15/football_gen_service_2"
+    build: ./service_2
+  service_3:
+    container_name: "football_gen_service_3"
+    image: "ahafiz15/football_gen_service_3"
+    build: ./service_3
+  service_4:
+    container_name: "football_gen_service_4"
+    image: "ahafiz15/football_gen_service_4"
+    build: ./service_4

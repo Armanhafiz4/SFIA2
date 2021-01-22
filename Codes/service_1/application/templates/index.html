@@ -1,0 +1,15 @@
+<h1>GENERATE A FOOTBALLER</h1>
+<br>
+<h2>Refresh the page to generate a new footballer with a suitable and unsuitable position!</h2>
+<br><br>
+<p>
+    Your best trait is your {{ strength }} so your best position will be as a {{ position["suited_position"] }} !
+    <br><br>
+    Your worst trait is your {{ weakness }} and therefore your worst position would be as a {{ position["unsuited_position"] }} ! 
+</p>
+
+<h2>Your most recent strength and its suitable position:</h2>
+{% for position in all_positions %}
+Your best strength is {{ position.strength_type }} so your best position will be as a {{ position.position_type }}
+<br><br>
+{% endfor %}
