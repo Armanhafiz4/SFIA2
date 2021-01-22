@@ -1,5 +1,6 @@
 from application import app, db  
 from flask import render_template 
+from sqlalchemy import desc 
 import requests
 
 class Positions(db.Model):
@@ -19,7 +20,7 @@ def index():
     db.session.add(new_position)
     db.session.commit()
 
-    all_positions = Positions.query.all()
+    all_positions = Positions.query.order_by(desc("id")).limit(5).all()
 
     return render_template("index.html", strength=strength_response.text, weakness=weakness_response.text, position=position_response.json(), all_positions=all_positions)
 

@@ -8,8 +8,8 @@
     Your worst trait is your {{ weakness }} and therefore your worst position would be as a {{ position["unsuited_position"] }} ! 
 </p>
 
-<h2>Your recent most suitable positions!:</h2>
+<h2>Your most recent strength and its suitable position:</h2>
 {% for position in all_positions %}
-{{ position.position_type }}
-<br>
+Your best strength is {{ position.strength_type }} so your best position will be as a {{ position.position_type }}
+<br><br>
 {% endfor %}
