@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 test.db
+data.db
